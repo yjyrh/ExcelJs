@@ -1,0 +1,23 @@
+git init (初始化仓库)
+
+git add . //全部文件
+
+git commit -m "信息" 
+
+git config --global user.name  用户命
+
+git config --global user.password  密码
+
+git commit -m "信息" 
+
+git remote  https:....仓库地址
+
+
+
+
+
+
+
+git pull (将远程仓库的提交拉到本地)
+
+git push (将本地的提交推送到远程仓库)
