@@ -9,7 +9,7 @@ $('#weww').tableExport({ type: 'word', escape: 'true', fileName: "导出" })
 jquery.PrintArea2.4.0.js
  $('#weww').printArea();
 
-//打印 样式需要打印需要包含在打印内容中
+//打印 
 jQuery.print.js
  $('#weww').print();
 
