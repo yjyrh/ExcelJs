@@ -1,0 +1,36 @@
+jquery-2.0.0.min.js
+
+//导出正常的table表格
+jquery.base64.js
+tableexport1.js
+$('#weww').tableExport({ type: 'word', escape: 'true', fileName: "导出" })
+
+//打印 样式需要打印需要包含在打印内容中
+jquery.PrintArea2.4.0.js
+ $('#weww').PrintArea();
+
+//打印 样式需要打印需要包含在打印内容中
+jQuery.print.js
+ $('#weww').Print();
+
+
+//导出局部页面 只基于jquery
+function tableToExcel() {
+        //Worksheet名
+        let worksheet = 'Sheet1'
+        let uri = 'data:application/vnd.ms-excel;base64,';
+
+        //下载的表格模板数据
+        let template = `<html xmlns:o="urn:schemas-microsoft-com:office:office" 
+      xmlns:x="urn:schemas-microsoft-com:office:excel" 
+      xmlns="http://www.w3.org/TR/REC-html40">
+      <head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
+        <x:Name>${worksheet}</x:Name>
+        <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>
+        </x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+        </head><body><table>${$("#weww").html()}</table></body></html>`;
+        //下载模板
+        window.location.href = uri + base64(template)
+    }
+    //输出base64编码
+    function base64(s) { return window.btoa(unescape(encodeURIComponent(s))) }
