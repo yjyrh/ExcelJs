@@ -7,11 +7,11 @@ $('#weww').tableExport({ type: 'word', escape: 'true', fileName: "导出" })
 
 //打印 样式需要打印需要包含在打印内容中
 jquery.PrintArea2.4.0.js
- $('#weww').PrintArea();
+ $('#weww').printArea();
 
 //打印 样式需要打印需要包含在打印内容中
 jQuery.print.js
- $('#weww').Print();
+ $('#weww').print();
 
 
 //导出局部页面 只基于jquery
